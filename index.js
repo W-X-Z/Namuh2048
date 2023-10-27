@@ -21,7 +21,7 @@
     engine: engine,
     options: {
       width: 480,
-      height: 720,
+      height: 480,
       wireframes: false,
     },
   });
@@ -39,7 +39,7 @@
 
   let isLineEnable = false;
 
-  const background = Bodies.rectangle(240, 360, 480, 720, {
+  const background = Bodies.rectangle(240, 240, 480, 480, {
     isStatic: true,
     render: { fillStyle: "#fe9" },
   });
@@ -48,15 +48,15 @@
     category: 1,
     mask: -2,
   };
-  const ground = Bodies.rectangle(400, 1220, 810, 1000, {
+  const ground = Bodies.rectangle(240, 680, 480, 400, {
     isStatic: true,
     render: { fillStyle: "transparent" },
   });
-  const wallLeft = Bodies.rectangle(-50, 500, 100, 1000, {
+  const wallLeft = Bodies.rectangle(-50, 240, 100, 480, {
     isStatic: true,
     render: { fillStyle: "transparent" },
   });
-  const wallRight = Bodies.rectangle(530, 500, 100, 1000, {
+  const wallRight = Bodies.rectangle(530, 240, 100, 480, {
     isStatic: true,
     render: { fillStyle: "transparent" },
   });
@@ -276,7 +276,7 @@
   }
 
   function resize() {
-    canvas.height = 720;
+    canvas.height = 480;
     canvas.width = 480;
 
     if (isMobile()) {
